@@ -14,6 +14,8 @@ verbose_message("添加单元测试在${CMAKE_PROJECT_NAME}Tests...")
 # 
 foreach(file ${test_sources})
   string(REGEX REPLACE "(.*/)([a-zA-Z0-9_ ]+)(\.cpp)" "\\2" test_name ${file}) 
+  # message(STATUS "test_name:")
+  # message(STATUS ${test_name})
   add_executable(${test_name}_Tests ${file})
 
   #

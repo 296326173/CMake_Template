@@ -19,7 +19,7 @@ file(GLOB_RECURSE sources src/project/*.cpp)
 set(exe_sources
 		# src/main.cpp
     main.cpp
-		${sources}
+	${sources}
 )
 
 file(GLOB_RECURSE headers include/project/*.hpp)

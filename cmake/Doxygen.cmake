@@ -7,5 +7,5 @@ if(${PROJECT_NAME}_ENABLE_DOXYGEN)
     find_package(Doxygen REQUIRED dot)
     doxygen_add_docs(doxygen-docs ${PROJECT_SOURCE_DIR})
 
-    verbose_message("Doxygen has been setup and documentation is now available.")
+    verbose_message("Doxygen已经设置好了,文档现在可以使用了.")
 endif()

@@ -8,10 +8,11 @@ public:
     core(int data){
         this->data = data;
     }
-    ~core();
+    ~core(){}
 public:
     int getData();
     void setData(int data);
+    void add(int data);
 };
 
 inline int core::getData()
