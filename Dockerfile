@@ -42,6 +42,6 @@ RUN git clone https://github.com/google/googletest.git --branch release-1.14.0 &
 	cmake --build build --config Release && \
 	cmake --build build --target install --config Release
 
-# RUN git clone https://github.com/microsoft/vcpkg -b 2020.06 && \
+# RUN git clone https://github.com/microsoft/vcpkg && \
 # 		cd vcpkg && \
 # 		./bootstrap-vcpkg.sh -disableMetrics -useSystemBinaries	

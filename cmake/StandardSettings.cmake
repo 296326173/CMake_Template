@@ -1,6 +1,6 @@
 #
 # 项目设置
-#
+# as
 option(${PROJECT_NAME}_BUILD_EXECUTABLE "将项目构建为可执行文件,而不是库." ON)
 option(${PROJECT_NAME}_BUILD_HEADERS_ONLY "将项目构建为仅头文件库." OFF)
 option(${PROJECT_NAME}_USE_ALT_NAMES "为项目使用替代名称,例如将include目录命名为全小写." ON)
@@ -28,7 +28,7 @@ option(${PROJECT_NAME}_USE_CATCH2 "使用Catch2项目创建单元测试." OFF)
 # 静态分析程序
 # 当前支持: Clang-Tidy, Cppcheck.
 option(${PROJECT_NAME}_ENABLE_CLANG_TIDY "使用Clang-Tidy启用静态分析." OFF)
-option(${PROJECT_NAME}_ENABLE_CPPCHECK "使用Cppcheck启用静态分析." ON)
+option(${PROJECT_NAME}_ENABLE_CPPCHECK "使用Cppcheck启用静态分析." OFF)
 
 #
 # Code coverage  
@@ -83,5 +83,4 @@ if(${PROJECT_NAME}_ENABLE_ASAN)
 # else()
     # message("启用地址清除功能失败.")
 endif()
-# message(STATUS "启用地址清除功能以检测内存错误.")
 

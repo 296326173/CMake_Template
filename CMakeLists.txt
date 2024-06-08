@@ -235,7 +235,7 @@ endif()
 
 message(STATUS "完成了包含目录的设置.")
 
-#
+# 1
 # 为库提供别名
 # 
 if(${PROJECT_NAME}_BUILD_EXECUTABLE)

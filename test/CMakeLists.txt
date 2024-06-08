@@ -47,11 +47,12 @@ foreach(file ${test_sources})
 
   if(${CMAKE_PROJECT_NAME}_USE_GTEST)
     find_package(GTest REQUIRED)
-
+    if(NOT GTest_FOUND)
+      message(FATAL_ERROR "找不到GoogleTest")
+    endif()
     if(${CMAKE_PROJECT_NAME}_USE_GOOGLE_MOCK)
       set(GOOGLE_MOCK_LIBRARIES GTest::gmock GTest::gmock_main)
     endif()
-
     target_link_libraries(
       ${test_name}_Tests
       PUBLIC
@@ -62,6 +63,9 @@ foreach(file ${test_sources})
     )
   elseif(${CMAKE_PROJECT_NAME}_USE_CATCH2)
     find_package(Catch2 REQUIRED)
+    if(NOT Catch2_FOUND)
+      message(FATAL_ERROR "找不到Catch2")
+    endif()
     target_link_libraries(
       ${test_name}_Tests
       PUBLIC
@@ -84,4 +88,4 @@ foreach(file ${test_sources})
   )
 endforeach()
 
-verbose_message("为${CMAKE_PROJECT_NAME}成功添加单元测试.")
+message(STATUS "为${CMAKE_PROJECT_NAME}成功添加单元测试.")
